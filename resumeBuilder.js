@@ -112,14 +112,14 @@ var projects = {
 			"title" : "Online Resume",
 			"dates" : "August 2017",
 			"description" : "Created an online resume of work as part of Udacity's Front-End Web Developer. I used HTML, CSS, and JavaScript.",
-			"iamges" : ["images/OnlineResume.png"],
+			"iamge" : ["images/OnlineResume.png"],
 			"url" : "https://github.com/Alissid/OnlineResume"
 		},
 		{
 			"title" : "Portfolio of Work",
 			"dates" : "June 2017",
 			"description" : "Created an online portfolio of work using HTML5 and CSS3",
-			"images" : ["images/OnlinePortfolio.png"],
+			"image" : ["images/OnlinePortfolio.png"],
 			"url" : "https://github.com/Alissid/Portfolio"
 		}
 	]
@@ -150,12 +150,12 @@ if(bio.skills.length > 0) {
 	for(var i = 0; i< bio.skills.length; i++) {
 		$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
 	}
-};
+}
 
 for(var i = 0; i < formattedContactInfo.length; i++) {
 	$("#topContacts").append(formattedContactInfo[i]);
 	$("#footerContacts").append(formattedContactInfo[i]);
-};
+}
 
 
 function displayWork() {
@@ -181,7 +181,7 @@ function displayWork() {
 
 	}
 
-};
+}
 
 displayWork();
 
@@ -198,12 +198,6 @@ projects.display = function() {
 			$(".project-entry:last").append(formattedProjectTitle);
 			$(".project-entry:last").append(formattedProjectDates);
 			$(".project-entry:last").append(formattedProjectDescription);
-
-			for(img in projects.projects[i].images) {
-				var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[img]);
-				$(".project-entry:last").append(formattedProjectImage);
-			}
-
 		}
 	}
 };
