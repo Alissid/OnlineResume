@@ -8,9 +8,9 @@ var bio = {
 		"twitter" : "@essidmedali",
 		"location" : "San Frnacisco Bay Area"
 	},
-	"welcomeMessage" : "Analytical, goal oriented and self-driven leader with a deep interest in technology, online advertising, finance, and social media "+
-                      "Team player, dedicated, proactive, curious, and always eager to learn new approaches/methodologies "+
-                      "Self-starter and passionate for getting things done with minimal direction. Always ready to roll up the sleeves and get into the details "+
+	"welcomeMessage" : "Analytical, goal oriented and self-driven leader with strong passion for digital advertising and data analytics. "+
+                      "Team player, dedicated, proactive, curious, and always eager to learn new approaches/methodologies. "+
+                      "Self-starter and passionate for getting things done with minimal supervision. Always ready to go above and beyond my duty. "+
                       "Google AdWords and DFP certified. Fluent in Arabic and French!",
 	"skills" : ["SQL", "HTML5", "CSS3", "JavaScript"],
   "picture" : "images/me.png"
@@ -22,7 +22,7 @@ var work = {
 			"employer" : "YouTube",
 			"title" : "Partner Monetization Support",
 			"location" : "San Bruno, CA",
-			"datesWorked" : "April 2015 - Present",
+			"dates" : "April 2015 - Present",
 			"description" : "Facilitating partners monetization set-up and partners onboarding through gCases "+
 				"Troubleshooting, investigating and resolving partners monetization issues on YouTube channels and/or YouTube videos "+
 				"Handling internal escalations from different Google teams (e.g. Partner Managers and Account Managers) to investigate channels "+
@@ -36,7 +36,7 @@ var work = {
 			"employer" : "YouTube",
 			"title" : "Policy Ops Associate",
 			"location" : "San Bruno, CA",
-			"datesWorked" : "February 2015 - April 2015",
+			"dates" : "February 2015 - April 2015",
 			"description" : "Enforced YouTube policy guidelines while reviewing content that was flagged by our users and evaluated it for policy compliance, "+
 				" I was rewarded for Special Achievement from YT Policy Ops team, and nominated one of the best employees of the month."
 		},
@@ -44,7 +44,7 @@ var work = {
 			"employer" : "T3 Trading",
 			"title" : "Equities Trader",
 			"location" : "New York, NY",
-			"datesWorked" : "January 2014 - July 2014",
+			"dates" : "January 2014 - July 2014",
 			"description" : "Established a daily Indexes and Stock research, selected Long and Short setups, analyzed different time frames, identified " +
         "and executed equity trades using technical & broad market analysis. " +
 				"Implemented a multi-strategy focus in order to increase returns while balancing risk/reward ratio. " +
@@ -56,7 +56,7 @@ var work = {
 			"employer" : "Legends Securities",
 			"title" : "Intern",
 			"location" : "New York, NY",
-			"datesWorked" : "June 2012 - December 2012",
+			"dates" : "June 2012 - December 2012",
 			"description" : "Established clients base and potential investors with assets to manage. " +
       "Used Bloomberg Terminal to follow the stock market, monitored real-time fluctuations within the trading day, and assisted "+
       "in different strategies of managing portfolios. "+
@@ -82,7 +82,7 @@ var education = {
 			"url" : "www.esct.rnu.tn"
     }
 	],
-	"Certifications": [
+	"certifications": [
 		{ "school" : "Udacity",
 			"course" : "Front-end Web Developer Nanodegree",
 			"dates" : "Expected December 2017",
@@ -110,14 +110,16 @@ var projects = {
 	"projects" : [
     {
 			"title" : "Online Resume",
-			"datesWorked" : "August 2017",
+			"dates" : "August 2017",
 			"description" : "Created an online resume of work as part of Udacity's Front-End Web Developer. I used HTML, CSS, and JavaScript.",
+			"url" : "https://github.com/Alissid/OnlineResume"
 		},
 		{
-			"title" : "Online Portfolio",
-			"datesWorked" : "June 2017",
+			"title" : "Portfolio of Work",
+			"dates" : "June 2017",
 			"description" : "Created an online portfolio of work using HTML5 and CSS3",
 			"images" : ["images/OnlinePortfolio.png"],
+			"url" : "https://github.com/Alissid/Portfolio"
 		}
 	]
 };
@@ -209,7 +211,7 @@ projects.display = function() {
 projects.display();
 
 education.display = function() {
-	if(education.schools.length > 0 || education.Certifications.length > 0) {
+	if(education.schools.length > 0 || education.certifications.length > 0) {
 		for(i in education.schools) {
 			$("#education").append(HTMLschoolStart);
 
@@ -225,14 +227,14 @@ education.display = function() {
 			$(".education-entry:last").append(formattedSchoolMajor);
 		}
 
-		if(education.Certifications.length > 0) {
+		if(education.certifications.length > 0) {
 			$("#education").append(HTMLonlineClasses);
-			for(i in education.onlineCourses) {
+			for(j in education.certifications) {
 				$("#education").append(HTMLschoolStart);
-				var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.Certifications[i].course).replace("#", education.Certifications[i].url);
-				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.Certifications[i].school);
-				var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.Certifications[i].dates);
-				var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.Certifications[i].url).replace("#", education.Certifications[i].url);
+				var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.certifications[j].course).replace("#", education.certifications[j].url);
+				var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.certifications[j].school);
+				var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.certifications[j].dates);
+				var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.certifications[j].url).replace("#", education.certifications[j].url);
 
 				$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
 				$(".education-entry:last").append(formattedOnlineDates);
