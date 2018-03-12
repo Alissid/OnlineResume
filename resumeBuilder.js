@@ -1,35 +1,48 @@
 var bio = {
     "name": "Ali Essid",
-    "role": "Partner Monetization Support",
+    "role": "Ad Operations Specialist",
     "contacts": {
         "email": "essid.aly@gmail.com",
         "github": "alissid",
         "linkedin": "aliessid",
         "twitter": "@essidmedali",
-        "location": "San Frnacisco Bay Area",
+        "location": "San Francisco Bay Area",
 				"mobile": "(415)818-3200"
     },
-    "welcomeMessage": "Analytical, goal oriented and self-driven leader with strong passion for digital advertising and data analytics. " +
+    "welcomeMessage": "Analytical, goal oriented and self-driven leader with strong passion for technology and digital advertising. " +
         "Team player, dedicated, proactive, curious, and always eager to learn new approaches/methodologies. " +
         "Self-starter and passionate for getting things done with minimal supervision. Always ready to go above and beyond my duty. " +
-        "Google AdWords and DFP certified. Fluent in Arabic and French!",
-    "skills": ["SQL", "HTML5", "CSS3", "JavaScript"],
+        "Trilingual - English, French and Arabic",
+    "skills": ["SQL", "HTML5", "CSS3", "JavaScript", "Google G Suite applications", "Microsoft Office"],
     "biopic": "images/me.png"
 };
 
 var work = {
     "jobs": [{
+            "employer": "ZypMedia",
+            "title": "Ad Operations Specialist",
+            "location": "San Francisco, CA",
+            "dates": "December 2017 - Present",
+            "description": "Managing daily programmatic advertising initiatives on the Web, Facebook, and Connected TV. "+
+                "Supporting the campaign management team. "+
+                "Working closely with company partners in Radio (iHeartMedia), TV Broadcast (Sinclair), and other creative agencies to deliver    Media Strategy Plans to existing and incoming clients. "+
+                "Handling campaign trafficking for high budget, sensitive, and high priority clients. "+
+                "Troubleshooting Ad Tags and Rtargeting/Conversion Pixels integration on clients websites. "+
+                "Responding to all internal escalations coming from our Analysts and Account Managers. "+
+                "Staying at par with day to day responsibilities including supporting the campaign management team, meeting deadlines on campaign trafficking, and ensuring campaign setup for clients."
+        },
+      {
             "employer": "YouTube",
             "title": "Partner Monetization Support",
             "location": "San Bruno, CA",
             "dates": "April 2015 - Present",
-            "description": "Facilitating partners monetization set-up and partners onboarding through gCases " +
-                "Troubleshooting, investigating and resolving partners monetization issues on YouTube channels and/or YouTube videos " +
-                "Handling internal escalations from different Google teams (e.g. Partner Managers and Account Managers) to investigate channels " +
-                "and/or videos monetization concerns, YouTube-Google_AdSense association issues, and Advertiser-friendly content eligibilities " +
-                "Creating test accounts and testing new monetization suspension logics and/or new features before making them live to our partners  " +
-                "Running SQL queries to pull up data and generate reports from internal database " +
-                "Troubleshooting YouTube-AdSense association issues and providing solutions to partners " +
+            "description": "Facilitating partners monetization set-up and partners onboarding through gCases - "+
+                "Troubleshooting, investigating and resolving partners monetization issues on YouTube channels and/or YouTube videos - "+
+                "Handling internal escalations from different Google teams (e.g. Partner Managers, Account Managers, and Community Managers) to                 investigate channels "+
+                "and/or videos monetization issues, YouTube-Google_AdSense association issues, and Advertiser-friendly content eligibilities - "                  +
+                "Creating test accounts and testing new monetization suspension logics and/or new features before making them live to our       partners - "+
+                "Running SQL queries to pull up data and generate reports from internal database - "+
+                "Troubleshooting YouTube-AdSense association issues and providing solutions to partners - "+
                 "Reviewing premium channels/videos from policy perspective to meet our Advertiser-friendly guidelines."
         },
         {
@@ -37,7 +50,7 @@ var work = {
             "title": "Policy Ops Associate",
             "location": "San Bruno, CA",
             "dates": "February 2015 - April 2015",
-            "description": "Enforced YouTube policy guidelines while reviewing content that was flagged by our users and evaluated it for policy compliance, " +
+            "description": "Enforced YouTube policy guidelines while reviewing content that was flagged by our users and evaluated it for policy compliance - " +
                 " I was rewarded for Special Achievement from YT Policy Ops team, and nominated one of the best employees of the month."
         },
         {
@@ -45,11 +58,11 @@ var work = {
             "title": "Equities Trader",
             "location": "New York, NY",
             "dates": "January 2014 - July 2014",
-            "description": "Established a daily Indexes and Stock research, selected Long and Short setups, analyzed different time frames, identified " +
-                "and executed equity trades using technical & broad market analysis. " +
-                "Implemented a multi-strategy focus in order to increase returns while balancing risk/reward ratio. " +
-                "Used Bloomberg Terminal and Factset, maintained research & study of macro-economic trends as well as chart patterns to " +
-                "better prepare and anticipate the market and create trading ideas using technical analysis. " +
+            "description": "Established a daily Indexes and Stocks research - Selected Long and Short setups while analyzing different time frames - Identified " +
+                "and executed equity trades using technical & broad market analysis - " +
+                "Implemented a multi-strategy focus in order to increase returns while balancing risk/reward ratio - " +
+                "Used Bloomberg Terminal and Factset - Maintained research & study of macro-economic trends as well as chart patterns to " +
+                "better prepare and anticipate the market - Created trading ideas using technical analysis - " +
                 "Analyzed earning reports, reviewed analysts IPO reports, researched overall sector performance and company’s history."
         },
         {
@@ -70,7 +83,7 @@ var education = {
             "name": "Pace University, Lubin School of Business",
             "dates": "January 2012 - December 2013",
             "location": "New York, NY",
-            "degree": "MSsc in Investment Management",
+            "degree": "MS in Investment Management",
             "majors": "Finance",
             "url": "www.pace.edu"
         },
@@ -85,8 +98,8 @@ var education = {
     ],
     "onlineCourses": [{
             "name": "Udacity",
-            "title": "Front-end Web Developer Nanodegree",
-            "dates": "Expected December 2017",
+              "title": "HTML5, CSS3, JavaScript courses ",
+            "dates": "November 2017",
             "url": "https://www.udacity.com"
         },
         {
@@ -123,7 +136,7 @@ var projects = {
             "dates": "June 2017",
             "description": "Created an online portfolio of work using HTML5 and CSS3",
             "images": ["images/OnlinePortfolio.png"],
-            "url": "https://github.com/Alissid/Portfolio"
+            "url": "https://essid.neocities.org/"
         }
     ]
 };
@@ -160,7 +173,7 @@ bio.display = function() {
 	    $("#topContacts").append(formattedContactInfo[i]);
 	    $("#footerContacts").append(formattedContactInfo[i]);
 	}
-}
+};
 bio.display();
 
 
@@ -187,8 +200,7 @@ work.display = function() {
 
     }
 
-}
-
+};
 work.display();
 
 
